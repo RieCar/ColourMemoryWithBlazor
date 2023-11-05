@@ -18,12 +18,19 @@ namespace ColourMemoryWithBlazor.WebUI.Pages
 
         private Error? Error { get; set; }
 
+        private int amountOfPairs { get; set; }
 
+        private string foundAll { get; set; }
         protected async Task GetDeck(int size)
         {
             try
             {
                 deck = await Http.GetFromJsonAsync<Deck>($"/api/Deck/bySize/{size}");
+                if(deck != null)
+                {
+                    amountOfPairs = deck.AmountOfPairs;  
+                }
+                StateHasChanged();
             }
             catch (Exception)
             {
@@ -38,7 +45,13 @@ namespace ColourMemoryWithBlazor.WebUI.Pages
 
             if (validationOfDraws != null)
             {
-                IsPair = validationOfDraws.IsPair; 
+                IsPair = validationOfDraws.IsPair;
+                amountOfPairs--; 
+            }
+
+            if(amountOfPairs == 0)
+            {
+                foundAll = "Congratulations! You have found all pairs"; 
             }
         }
     }

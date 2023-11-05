@@ -1,30 +1,36 @@
 ﻿@page "/board"
 @using ColourMemoryWithBlazor.WebUI.Models;
-
+<div class="board">
 <PageTitle> Board </PageTitle>
 
 <h3>Board</h3>
 
+<div>
+        <p>Pairs to find: @amountOfPairs</p>
+</div>
+    <div class="validation @(IsPair ? "found" : "")">
+    Found pair!
+    @foundAll
+</div>
 <div class="initgame_container"> 
 <label class="initgame">
     Name size of deck
     <input class="initgame" @bind="deckSize"/>
 </label>
 <ButtonComponent ButtonText="Create deck" ButtonClass="btn_component initgame" OnClick="HandleButtonClick" />
+
 <div class="alert">  @Error?.Message </div>
 </div>
 
-<div class="validation @(IsPair ? "found" : "")">
-    <p class="validation"> Found pair!</p>
 </div>
 
+   <div class="grid"> 
 @if (deck == null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
-    <div class="grid"> 
     @foreach (var card in deck.DeckOfCards)
     {
             <div class="card">
@@ -32,14 +38,15 @@ else
             </div>
 
     }
-    </div>
+   
 
 }
+</div>
 @code {
     private int draws = 0; 
     private string deckSize = ""; 
 
-    if(validationOfDraws == true)
+
     private void HandleCardClicked(CardDto card)
     {
         card.IsClicked = !card.IsClicked;
@@ -55,9 +62,7 @@ else
             if(hasChosenPair == 2)
             {
                 var draws = deck.DeckOfCards.Where(x => x.IsClicked == true).ToArray();
-                var firstDrawColour = draws[0];
-                var secondDrawColour = draws[1]; 
-                CheckIfPair(firstDrawColour.Colour, secondDrawColour.Colour);
+                CheckIfPair(draws[0].Colour, draws[1].Colour);
 
             }
 
