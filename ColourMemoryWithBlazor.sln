@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34018.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1AED10ED-0809-4CB4-8F97-E3EF15E5B1A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InfraStructure", "InfraStructure", "{0A705151-4D0C-4181-883C-B7B7FA48B037}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{BFDF428B-EB09-4C59-B060-61023F95AF2F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColourMemoryWithBlazor.Domain", "ColourMemoryWithBlazor.Domain\ColourMemoryWithBlazor.Domain.csproj", "{8F882421-3F8A-4674-B15C-94E237015524}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColourMemoryWithBlazor.Application", "ColourMemoryWithBlazor.Application\ColourMemoryWithBlazor.Application.csproj", "{57BDDFE6-0753-4B67-9605-866F8357B879}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColourMemoryWithBlazor.WebUI", "ColourMemoryWithBlazor.WebUI\ColourMemoryWithBlazor.WebUI.csproj", "{5344DD1E-E4F5-40AA-826A-C350E57101A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColourMemoryWithBlazor.Persistence", "ColourMemoryWithBlazor.Persistence\ColourMemoryWithBlazor.Persistence.csproj", "{EED745A2-1D0B-4C58-B4EB-AA050E14201C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColourMemoryWithBlazor.API", "ColourMemoryWithBlazor.API\ColourMemoryWithBlazor.API.csproj", "{1006942E-2406-4305-B620-AA224D2FC441}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColourMemoryWithBlazor.CoreTest", "ColourMemoryWithBlazor.CoreTest\ColourMemoryWithBlazor.CoreTest.csproj", "{F42FCA9F-50A5-4D33-9138-791BFB910296}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F882421-3F8A-4674-B15C-94E237015524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F882421-3F8A-4674-B15C-94E237015524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F882421-3F8A-4674-B15C-94E237015524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F882421-3F8A-4674-B15C-94E237015524}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57BDDFE6-0753-4B67-9605-866F8357B879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57BDDFE6-0753-4B67-9605-866F8357B879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57BDDFE6-0753-4B67-9605-866F8357B879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57BDDFE6-0753-4B67-9605-866F8357B879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5344DD1E-E4F5-40AA-826A-C350E57101A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5344DD1E-E4F5-40AA-826A-C350E57101A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5344DD1E-E4F5-40AA-826A-C350E57101A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5344DD1E-E4F5-40AA-826A-C350E57101A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EED745A2-1D0B-4C58-B4EB-AA050E14201C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EED745A2-1D0B-4C58-B4EB-AA050E14201C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EED745A2-1D0B-4C58-B4EB-AA050E14201C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EED745A2-1D0B-4C58-B4EB-AA050E14201C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1006942E-2406-4305-B620-AA224D2FC441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1006942E-2406-4305-B620-AA224D2FC441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1006942E-2406-4305-B620-AA224D2FC441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1006942E-2406-4305-B620-AA224D2FC441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F42FCA9F-50A5-4D33-9138-791BFB910296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F42FCA9F-50A5-4D33-9138-791BFB910296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F42FCA9F-50A5-4D33-9138-791BFB910296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F42FCA9F-50A5-4D33-9138-791BFB910296}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8F882421-3F8A-4674-B15C-94E237015524} = {1AED10ED-0809-4CB4-8F97-E3EF15E5B1A2}
+		{57BDDFE6-0753-4B67-9605-866F8357B879} = {1AED10ED-0809-4CB4-8F97-E3EF15E5B1A2}
+		{5344DD1E-E4F5-40AA-826A-C350E57101A6} = {BFDF428B-EB09-4C59-B060-61023F95AF2F}
+		{EED745A2-1D0B-4C58-B4EB-AA050E14201C} = {0A705151-4D0C-4181-883C-B7B7FA48B037}
+		{1006942E-2406-4305-B620-AA224D2FC441} = {BFDF428B-EB09-4C59-B060-61023F95AF2F}
+		{F42FCA9F-50A5-4D33-9138-791BFB910296} = {1AED10ED-0809-4CB4-8F97-E3EF15E5B1A2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34DDCD18-0F51-45BF-9DD0-804A412B5FB1}
+	EndGlobalSection
+EndGlobal

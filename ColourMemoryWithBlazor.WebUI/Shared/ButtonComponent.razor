@@ -1,0 +1,12 @@
+﻿<button class="@ButtonClass" @onclick="OnClick">@ButtonText</button>
+
+@code {
+    [Parameter]
+    public string ButtonText { get; set; } = "Button";
+
+    [Parameter]
+    public string ButtonClass { get; set; } = "btn-primary";
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClick { get; set; }
+}

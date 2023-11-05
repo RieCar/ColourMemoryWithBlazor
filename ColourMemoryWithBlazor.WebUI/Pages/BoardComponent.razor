@@ -1,0 +1,74 @@
+﻿@page "/board"
+@using ColourMemoryWithBlazor.WebUI.Models;
+
+<PageTitle> Board </PageTitle>
+
+<h3>Board</h3>
+
+<div class="initgame_container"> 
+<label class="initgame">
+    Name size of deck
+    <input class="initgame" @bind="deckSize"/>
+</label>
+<ButtonComponent ButtonText="Create deck" ButtonClass="btn_component initgame" OnClick="HandleButtonClick" />
+<div class="alert">  @Error?.Message </div>
+</div>
+
+<div class="validation @(IsPair ? "found" : "")">
+    <p class="validation"> Found pair!</p>
+</div>
+
+@if (deck == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="grid"> 
+    @foreach (var card in deck.DeckOfCards)
+    {
+            <div class="card">
+                <span id="@card.RefrenceId" class="@card.Colour @(@card.IsClicked ? "clicked" : "unclicked")" @onclick="() => HandleCardClicked(card)"> @card.Colour </span>
+            </div>
+
+    }
+    </div>
+
+}
+@code {
+    private int draws = 0; 
+    private string deckSize = ""; 
+
+    if(validationOfDraws == true)
+    private void HandleCardClicked(CardDto card)
+    {
+        card.IsClicked = !card.IsClicked;
+
+        if (card.IsClicked)
+        {
+            var hasChosenPair = deck.DeckOfCards.Count(x => x.IsClicked == true);
+            if(hasChosenPair > 2)
+            {
+                foreach(var c in deck.DeckOfCards)
+                    c.IsClicked = false;
+            }
+            if(hasChosenPair == 2)
+            {
+                var draws = deck.DeckOfCards.Where(x => x.IsClicked == true).ToArray();
+                var firstDrawColour = draws[0];
+                var secondDrawColour = draws[1]; 
+                CheckIfPair(firstDrawColour.Colour, secondDrawColour.Colour);
+
+            }
+
+         
+        }
+    }
+
+    private void HandleButtonClick()
+    {
+        int size = int.Parse(deckSize);
+
+        GetDeck(size); 
+    }
+}

@@ -1,0 +1,21 @@
+﻿@page "/"
+@inject NavigationManager NavManager
+<PageTitle>Index</PageTitle>
+
+<h1>Colour Memory Game </h1>
+
+
+<ButtonComponent ButtonText="Start Colour memory game" ButtonClass="btn_component" OnClick="HandleClick" />
+
+@code {
+
+
+    private async Task HandleClick(MouseEventArgs args)
+    {
+        NavManager.NavigateTo("/board");
+    }
+
+
+
+
+}

@@ -1,0 +1,136 @@
+﻿
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:20px;
+}
+
+.initgame_container{
+    widht:300px; 
+    height:100px; 
+    overflow-block:auto;
+}
+    label.initgame{
+        padding:10px; 
+        width: 60%;
+        margin-bottom:20px; 
+    }
+
+    input.initgame{
+        padding:5px; 
+        width:60%;
+        border-radius:6%;
+    }
+
+
+.card {
+    width: calc(33.33% - 50px);
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+span {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+}
+
+
+    span.unclicked {
+        background-image: url('images/backside.png');
+        background-color: #cccccc; 
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: cover;
+    }
+    span.white.clicked {
+    background-color : #f1f1f1;
+    background-image:none;
+    padding:10px;
+    text-align:center;
+    justify-content:center;
+    }
+
+    span.red.clicked {
+        background-color: rgb(255, 0, 0);
+        background-image: none;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    span.green.clicked {
+        background-color: rgb(76, 255, 0);
+        background-image: none;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    span.blue.clicked {
+        background-color: rgb(0, 38, 255);
+        background-image: none;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+
+
+    span.yellow.clicked {
+        background-color: rgb(255, 216, 0);
+        background-image: none;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    span.purple.clicked {
+        background-color:rgb(178, 0, 255);
+        background-image: none;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+
+
+    span.pink.clicked {
+        background-color: rgb(255, 0, 220);
+        background-image: none;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    span.grey.clicked {
+        background-color: rgb(128, 128, 128);
+        background-image: none;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    span.brown.clicked {
+        background-color: rgb(255, 106, 0);
+        background-image: none;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    div.validation{
+        visibility:hidden;
+        height:50px;
+        width:50px;
+        border: 1px solid black; 
+    }
+
+        div.validation.found {
+            visibility: visible;
+            height: 50px;
+            width: 50px;
+            border: 1px solid black;
+        }
+
+
