@@ -22,6 +22,7 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 60%;
+    width: 40%;
     will-change: transform;
+    margin:5px;
 }
