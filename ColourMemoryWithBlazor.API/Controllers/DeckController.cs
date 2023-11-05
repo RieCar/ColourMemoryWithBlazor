@@ -21,7 +21,7 @@ namespace ColourMemoryWithBlazor.API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> Get([FromRoute] int size)
         {
-            if (size % 2 == 0)
+            if (size % 2 != 0)
                 return BadRequest("Invalid deck size"); 
 
             var query = new GetDeckSpecificSizeQuery(); 

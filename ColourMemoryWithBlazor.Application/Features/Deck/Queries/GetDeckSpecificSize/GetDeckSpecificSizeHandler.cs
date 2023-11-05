@@ -22,7 +22,8 @@ namespace ColourMemoryWithBlazor.Application.Features.Deck.Queries.GetDeckSpecif
 
     public class GetDeckSpecificSizeRespons
     {
-        public int PossibleWins { get; set; }
+       
+        public int AmountOfPairs { get; set; }
         public List<CardDto> DeckOfCards { get; set; }
         public GetDeckSpecificSizeRespons()
         {
@@ -55,7 +56,7 @@ namespace ColourMemoryWithBlazor.Application.Features.Deck.Queries.GetDeckSpecif
            var result = deck.CreateDeckWithSize();
             var response = new GetDeckSpecificSizeRespons
             {
-                PossibleWins = result.Cards.Count()%2,
+                AmountOfPairs = result.Cards.Count()/2,
                 DeckOfCards = result.Cards.Select(card => new CardDto(card.Colour, card.ImagePath)).ToList()
             };
             return Task.FromResult(response); 
